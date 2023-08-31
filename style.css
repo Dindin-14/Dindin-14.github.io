@@ -1,0 +1,152 @@
+/* font-family: 'Lilita One', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'Tajawal', sans-serif; */
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 48
+}
+.surprise {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(backround.avif);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.surprise::after {
+    content: '';
+    display: block;
+    background-color: white;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+.surprise > * {
+    position: relative;
+    z-index: 1;
+}
+/* header */
+.header {
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+}
+.header::after {
+    content: '';
+    display: block;
+    height: 90px;
+    width: 250px;
+    background-color: white;
+    opacity: 0.7;
+    filter: blur(8px);
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-11px, -80px);
+    z-index: -1;
+}
+
+/* hbd */
+.hbd h1 span:nth-child(1),.hbd h1 span:nth-child(3),.hbd h1 span:nth-child(5),.hbd h1 span:nth-child(7),.hbd h1 span:nth-child(9),.hbd h1 span:nth-child(11),.hbd h1 span:nth-child(13) {
+    display: inline-block;
+    animation: naik-turun 1s infinite alternate;
+}
+.hbd h1 span:nth-child(2),.hbd h1 span:nth-child(4),.hbd h1 span:nth-child(6),.hbd h1 span:nth-child(8),.hbd h1 span:nth-child(10),.hbd h1 span:nth-child(12),.hbd h1 span:nth-child(14) {
+    display: inline-block;
+    animation: naik-turun 1s infinite alternate-reverse;
+}
+.hbd > * {
+    font-size: 1.6rem;
+}
+.hbd .material-symbols-outlined:first-child {
+    transform: scaleX(-1);
+}
+.hbd > *, .nama > * {
+    display: inline-block;
+}
+.hbd h1 {
+    font-family: 'Lilita One', cursive;
+    color: palevioletred;
+}
+.hbd .material-symbols-outlined {
+    color: navy;
+}
+.nama h2 {
+    font-family: 'Satisfy', cursive;
+    color: palevioletred;
+}
+.nama .material-symbols-outlined  {
+    color: red;
+}
+
+/* card */
+.container-card {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: scroll;
+    padding: 20px 0;
+}
+.card {
+    background-color: palevioletred;
+    width: 250px;
+    border-radius: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0 20px;
+}
+.card img {
+    width: 100%;
+}
+.card p {
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.tombol {
+    margin-top: 20px;
+}
+.tombol a {
+    color: white;
+    text-decoration: none;
+}
+.tombol .material-symbols-outlined {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: palevioletred;
+}
+.tombol h3 {
+    font-family: 'Tajawal', sans-serif; 
+    font-size: 1.1rem;
+    text-align: center;
+}
+.hide {
+    opacity: 0;
+    transition: 1.5s;
+}
+@keyframes naik-turun {
+    from {
+        
+        transform: translateY(2px);
+    }
+    to {
+        
+        transform: translateY(-2px);
+    }
+}
+@keyframes gradient {
+    from {
+        background-image: linear-gradient();
+    }
+}
